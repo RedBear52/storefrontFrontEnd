@@ -6,6 +6,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component'
 import { HttpClientModule } from '@angular/common/http'
 import { ProductItemComponent } from './product-item/product-item.component'
 import { ProductListComponent } from './product-list/product-list.component'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatCardModule } from '@angular/material/card'
+import { MatIconModule } from '@angular/material/icon'
+import { MatButtonModule } from '@angular/material/button'
 
 @NgModule({
     declarations: [
@@ -14,7 +18,15 @@ import { ProductListComponent } from './product-list/product-list.component'
         ProductItemComponent,
         ProductListComponent,
     ],
-    imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatIconModule,
+        MatButtonModule,
+    ],
     providers: [],
     bootstrap: [AppComponent],
 })
