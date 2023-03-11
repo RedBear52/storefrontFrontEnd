@@ -18,12 +18,14 @@ export class CartService {
         }
     }
 
-    getCart(): Product[] {
-        return this.cart
-    }
-
     addProductToCart(product: Product): void {
+        console.log(product)
+
         alert(`${product.name} has been added to the cart`)
         this.cart.push(product)
+    }
+
+    getCart(): Product[] {
+        return this.cart
     }
 }
