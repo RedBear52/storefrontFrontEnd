@@ -1,12 +1,4 @@
-.card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem;
-  }
-
-  .product-item-card {
+.product-item-card {
     min-width: 30vw;
     align-items: center;
     justify-content: center;
