@@ -1,28 +1,18 @@
-<!-- <mat-card>
-            <mat-card-header>
-                <h3>{{ product.name }}</h3>
-            </mat-card-header>
+<mat-card class="product-item-card">
+    <mat-card-title class="card-title">
+        <h1>{{ product.name }}</h1>
+    </mat-card-title>
+    <img mat-card-lg-image class="product-img" src="{{ product.url }}" alt="{{ product.name }} image">
     <mat-card-content>
-            <img src="{{ product.url }}" alt="product image">
-            <p>Price: {{ product.price }}</p>
-            <p>Description: {{ product.description }}</p>
-            <p>Quantity: {{ product.quantity }}</p>
-            <button>Add to Cart</button>  
-    </mat-card-content>
-</mat-card> -->
-
-    <mat-card class="product-card">
-        <mat-card-header>
-          <mat-card-title class="card-title"><h1>{{ product.name }}</h1></mat-card-title>
-        </mat-card-header>
-        <img mat-card-lg-image class="product-img" src="{{ product.url }}" alt="{{ product.name }} image">
-        <mat-card-content>
-          <p>
+        <p>
             {{ product.description }}
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button color="primary">Add to Cart</button>
-        </mat-card-actions>
-      </mat-card>
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a href="./cart">
+            <button mat-raised-button color="primary"
+        (click)="addProduct(product)">Add to Cart</button>
+        </a>
+    </mat-card-actions>
+</mat-card>
   
