@@ -15,11 +15,11 @@ export class NavBarComponent {
     }
 
     ngOnInit() {
-        // this.cartService.getCartQuantity()
-        // console.log(this.badgeNum)
+        this.cartService.getCartQuantity()
+        console.log(this.badgeNum)
     }
 
-    incrementBadgeNum() {
-        this.badgeNum++
-    }
+    // incrementBadgeNum() {
+    //     this.badgeNum++
+    // }
 }

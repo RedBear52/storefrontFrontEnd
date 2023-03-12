@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { Injectable } from '@angular/core'
 import { Product } from '../models/Product'
 
@@ -5,18 +6,9 @@ import { Product } from '../models/Product'
     providedIn: 'root',
 })
 export class CartService {
-    product: Product
     cart: Product[] = []
 
-    constructor() {
-        this.product = {
-            name: '',
-            price: 0,
-            quantity: 1,
-            url: '',
-            description: '',
-        }
-    }
+    constructor() {}
 
     addProductToCart(product: Product): Product[] {
         // alert(`${product.name} has been added to the cart`)
