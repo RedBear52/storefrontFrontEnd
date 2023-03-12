@@ -9,21 +9,14 @@ import { CartService } from '../services/cart.service'
     styleUrls: ['./cart.component.css'],
 })
 export class CartComponent {
-    product: Product
+    // product: Product
     productsInCart: Product[] = []
 
-    constructor(private cart: CartService) {
-        this.product = {
-            name: '',
-            price: 0,
-            quantity: 0,
-            url: '',
-            description: '',
-        }
-    }
+    constructor(private cart: CartService) {}
 
     ngOnInit(): void {
         this.productsInCart = this.cart.getCart()
         console.log(this.productsInCart)
+        this.cart.getCartQuantity()
     }
 }

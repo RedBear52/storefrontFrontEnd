@@ -12,22 +12,24 @@ export class CartService {
         this.product = {
             name: '',
             price: 0,
-            quantity: 0,
+            quantity: 1,
             url: '',
             description: '',
         }
     }
 
     addProductToCart(product: Product): Product[] {
-        // console.log(product)
-
-        alert(`${product.name} has been added to the cart`)
+        // alert(`${product.name} has been added to the cart`)
         this.cart.push(product)
-        console.log(this.cart)
         return this.cart
     }
 
     getCart(): Product[] {
         return this.cart
+    }
+
+    getCartQuantity() {
+        console.log(this.cart.length)
+        return this.cart.length
     }
 }

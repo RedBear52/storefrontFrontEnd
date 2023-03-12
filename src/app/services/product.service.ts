@@ -12,4 +12,8 @@ export class ProductService {
     getProducts(): Observable<Product[]> {
         return this.http.get<Product[]>('../assets/data.json')
     }
+
+    addProduct(product: Product): Observable<Product> {
+        return this.http.post<Product>('../assets/data.json', product)
+    }
 }

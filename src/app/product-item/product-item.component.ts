@@ -25,6 +25,7 @@ export class ProductItemComponent {
     }
 
     addProduct(product: Product): void {
+        product.quantity++
         this.cart.addProductToCart(product)
     }
 }
