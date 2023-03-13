@@ -14,7 +14,8 @@ import { MatSelectModule } from '@angular/material/select'
 import { MatBadgeModule } from '@angular/material/badge'
 import { ProductItemDetailComponent } from './product-item-detail/product-item-detail.component'
 import { CartComponent } from './cart/cart.component'
-import { CartItemComponent } from './cart-item/cart-item.component'
+import { CartItemComponent } from './cart-item/cart-item.component';
+import { CheckoutComponent } from './checkout/checkout.component'
 
 @NgModule({
     declarations: [
@@ -26,6 +27,7 @@ import { CartItemComponent } from './cart-item/cart-item.component'
         CartComponent,
         ProductItemComponent,
         CartItemComponent,
+        CheckoutComponent,
     ],
     imports: [
         BrowserModule,

@@ -12,16 +12,19 @@ export class CartComponent {
     cartQuantity: number
     productsInCart: Product[] = []
     cartTotal: number
+    cartTotalString: string
 
     constructor(private cart: CartService) {
         this.cartQuantity = 0
         this.cartTotal = 0
+        this.cartTotalString = ''
     }
 
     ngOnInit(): void {
         this.productsInCart = this.cart.getCart()
         this.cartQuantity = this.productsInCart.length
         this.cartTotal = this.cart.getCartTotal()
+        this.cartTotalString = this.cartTotal.toFixed(2)
     }
 
     increment(product: Product) {

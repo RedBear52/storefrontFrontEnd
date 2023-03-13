@@ -1,0 +1,53 @@
+<mat-card class="checkout-form-card">
+    <h1>Complete Your Purchase!</h1>
+
+    <mat-card-content>
+        <form class="checkout-form">
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="First name"
+                    formControlName="first-name"
+                    required
+                />
+                <input
+                    matInput
+                    placeholder="Last name"
+                    formControlName="last-name"
+                    required
+                />
+            </mat-form-field>
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Street address"
+                    formControlName="street-address"
+                    required
+                />
+                <input
+                    matInput
+                    placeholder="City"
+                    formControlName="city"
+                    required
+                />
+                <input
+                    matInput
+                    placeholder="Zip code"
+                    formControlName="zip-code"
+                    required
+                />
+            </mat-form-field>
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="credit card number"
+                    formControlName="cc-number"
+                    required
+                />
+            </mat-form-field>
+        </form>
+        <button mat-raised-button color="primary" type="submit">
+            Complete Purchase
+        </button>
+    </mat-card-content>
+</mat-card>
