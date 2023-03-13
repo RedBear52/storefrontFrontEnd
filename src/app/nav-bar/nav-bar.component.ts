@@ -10,16 +10,12 @@ export class NavBarComponent {
     badgeNum: number
 
     constructor(private cartService: CartService) {
-        this.badgeNum = this.cartService.getCartQuantity()
-        console.log(this.badgeNum)
+        this.badgeNum = 0
     }
 
-    ngOnInit() {
-        this.cartService.getCartQuantity()
+    showCartQuant() {
+        this.badgeNum = this.cartService.getCart().length
         console.log(this.badgeNum)
+        return this.badgeNum
     }
-
-    // incrementBadgeNum() {
-    //     this.badgeNum++
-    // }
 }

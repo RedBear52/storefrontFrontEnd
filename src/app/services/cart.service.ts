@@ -6,9 +6,13 @@ import { Product } from '../models/Product'
     providedIn: 'root',
 })
 export class CartService {
-    cart: Product[] = []
+    cart: Product[]
+    total: number
 
-    constructor() {}
+    constructor() {
+        this.cart = []
+        this.total = 0
+    }
 
     addProductToCart(product: Product): Product[] {
         // alert(`${product.name} has been added to the cart`)
@@ -23,5 +27,22 @@ export class CartService {
     getCartQuantity() {
         console.log(this.cart.length)
         return this.cart.length
+    }
+
+    increment(product: Product) {
+        product.quantity += 1
+        return this.cart
+    }
+
+    decrement(product: Product) {
+        product.quantity -= 1
+        return this.cart
+    }
+
+    getCartTotal() {
+        this.total = this.cart
+            .map((product) => product.price * product.quantity)
+            .reduce((a, b) => a + b, 0)
+        return this.total
     }
 }

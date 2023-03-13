@@ -10,6 +10,7 @@ import { CartService } from '../services/cart.service'
 })
 export class ProductItemComponent {
     @Input() product: Product
+    // price: number
 
     constructor(
         private productService: ProductService,
@@ -27,4 +28,13 @@ export class ProductItemComponent {
     addProduct(product: Product): void {
         this.cart.addProductToCart(product)
     }
+
+    // increment() {
+    //     this.product.quantity += 1
+    //     this.product.price = this.product.price * this.product.quantity
+    // }
+
+    // decrement() {
+    //     this.product.quantity -= 1
+    // }
 }

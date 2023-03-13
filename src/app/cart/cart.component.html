@@ -13,9 +13,18 @@
             {{ item.description }}
         </p>
         <p>${{ item.price }}</p>
-        <p>
-            {{ item.quantity }}
-        </p>
-        <p>cart quant: {{ cartQuantity }}</p>
+        <div class="incrementer">
+            <button mat-icon-button color="accent" (click)="decrement(item)">
+                <i class="material-icons">remove_circle_outline</i>
+            </button>
+            qty: {{ item.quantity }}
+            <button mat-icon-button color="accent" (click)="increment(item)">
+                <i class="material-icons">add_circle_outline</i>
+            </button>
+        </div>
     </mat-card-content>
+</mat-card>
+
+<mat-card class="product-item-card">
+    <p>Total: {{ cartTotal }}</p>
 </mat-card>

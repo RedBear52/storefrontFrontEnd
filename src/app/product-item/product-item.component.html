@@ -13,19 +13,10 @@
             {{ product.description }}
         </p>
         <p>${{ product.price }}</p>
-        <p>
-            {{ product.quantity }}
-        </p>
     </mat-card-content>
     <mat-card-actions>
-        <a routerLink="/cart">
-            <button
-                mat-raised-button
-                color="primary"
-                (click)="addProduct(product)"
-            >
-                Add to Cart
-            </button>
-        </a>
+        <button mat-raised-button color="primary" (click)="addProduct(product)">
+            Add to Cart
+        </button>
     </mat-card-actions>
 </mat-card>
