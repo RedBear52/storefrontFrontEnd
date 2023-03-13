@@ -1,12 +1,21 @@
-
 <mat-card *ngFor="let item of productsInCart" class="product-item-card">
     <mat-card-title class="card-title">
         <h1>{{ item.name }}</h1>
     </mat-card-title>
-    <img mat-card-lg-image class="product-img" src="{{ item.url }}" alt="{{ item.name }} image">
+    <img
+        mat-card-lg-image
+        class="product-img"
+        src="{{ item.url }}"
+        alt="{{ item.name }} image"
+    />
     <mat-card-content>
         <p>
             {{ item.description }}
         </p>
+        <p>${{ item.price }}</p>
+        <p>
+            {{ item.quantity }}
+        </p>
+        <p>cart quant: {{ cartQuantity }}</p>
     </mat-card-content>
 </mat-card>

@@ -18,6 +18,8 @@ export class CartComponent {
 
     ngOnInit(): void {
         this.productsInCart = this.cart.getCart()
+        this.cartQuantity = this.productsInCart.length
         console.log(this.productsInCart)
+        console.log(this.productsInCart.length)
     }
 }
