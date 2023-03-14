@@ -22,7 +22,7 @@ export class CartComponent {
 
     ngOnInit(): void {
         this.productsInCart = this.cart.getCart()
-        this.cartQuantity = this.productsInCart.length
+        this.cartQuantity = this.cart.getCartQuantity()
         this.cartTotal = this.cart.getCartTotal()
         this.cartTotalString = this.cartTotal.toFixed(2)
     }
