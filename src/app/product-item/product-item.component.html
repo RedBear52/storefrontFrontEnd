@@ -13,15 +13,6 @@
             {{ product.description }}
         </p>
         <p>${{ product.price }}</p>
-        <div class="incrementer">
-            <button mat-icon-button color="accent" (click)="decrement(product)">
-                <i class="material-icons">remove_circle_outline</i>
-            </button>
-            qty: {{ product.quantity }}
-            <button mat-icon-button color="accent" (click)="increment(product)">
-                <i class="material-icons">add_circle_outline</i>
-            </button>
-        </div>
     </mat-card-content>
     <mat-card-actions>
         <button mat-raised-button color="primary" (click)="addProduct(product)">

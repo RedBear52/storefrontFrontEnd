@@ -28,15 +28,28 @@ export class CartComponent {
     }
 
     increment(product: Product) {
+        console.log(product.quantity)
         this.cart.increment(product)
-        this.cart.getCartTotal()
+        console.log(product.quantity)
+        this.cart.addProductToCart(product)
+        console.log(product.quantity)
+        this.cartTotal = this.cart.getCartTotal()
+        console.log(this.cart.getCartTotal())
+        this.cartTotalString = this.cartTotal.toFixed(2)
     }
 
     decrement(product: Product) {
-        if (product.quantity >= 1) {
+        if (product.quantity > 1) {
+            console.log(product.quantity)
             this.cart.decrement(product)
+            console.log(product.quantity)
             this.cart.getCartTotal()
+            console.log(this.cart.getCartTotal())
+        } else if (product.quantity === 1) {
+            this.cart.removeProductFromCart(product)
         }
+        this.cartTotal = this.cart.getCartTotal()
+        this.cartTotalString = this.cartTotal.toFixed(2)
     }
 
     getCartTotal() {

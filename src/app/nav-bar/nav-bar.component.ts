@@ -14,8 +14,7 @@ export class NavBarComponent {
     }
 
     showCartQuant() {
-        this.badgeNum = this.cartService.getCart().length
-        console.log(this.badgeNum)
+        this.badgeNum = this.cartService.getCartQuantity()
         return this.badgeNum
     }
 }

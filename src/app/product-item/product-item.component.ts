@@ -30,12 +30,14 @@ export class ProductItemComponent {
 
     increment(product: Product) {
         this.cart.increment(product)
+        this.cart.addProductToCart(product)
         this.cart.getCartTotal()
     }
 
     decrement(product: Product) {
         if (product.quantity >= 1) {
             this.cart.decrement(product)
+            this.cart.removeProductFromCart(product)
             this.cart.getCartTotal()
         }
     }
